@@ -13,8 +13,23 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    Tools/mybrushtool.cpp \
+    Tools/mycircletool.cpp \
+    Tools/myerasetool.cpp \
+    Tools/myfillingtool.cpp \
+    Tools/myrectangletool.cpp \
+    mygraphicsscene.cpp \
+    toolmanager.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    Tools/mybrushtool.h \
+    Tools/mycircletool.h \
+    Tools/myerasetool.h \
+    Tools/myfillingtool.h \
+    Tools/myrectangletool.h \
+    mygraphicsscene.h \
+    toolbase.h \
+    toolmanager.h
 
 FORMS    += mainwindow.ui

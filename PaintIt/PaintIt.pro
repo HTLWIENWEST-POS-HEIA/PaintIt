@@ -33,3 +33,6 @@ HEADERS  += mainwindow.h \
     toolmanager.h
 
 FORMS    += mainwindow.ui
+
+RESOURCES += \
+    resources.qrc

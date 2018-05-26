@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/brush.png</file>
+        <file>icons/Editing-Text-icon.png</file>
+        <file>icons/fill-color.png</file>
+        <file>icons/Line-Tool-512.png</file>
+        <file>icons/spray.png</file>
+        <file>icons/stamp-512.png</file>
+        <file>icons/swap.png</file>
+    </qresource>
+</RCC>

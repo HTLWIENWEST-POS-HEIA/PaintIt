@@ -28,6 +28,20 @@ private slots:
 
     void on_tbtnBackgroundColor_clicked();
 
+    void on_tbtnStamp_clicked();
+
+    void on_tbtnBrush_clicked();
+
+    void on_tbtnLine_clicked();
+
+    void on_tbtnFill_clicked();
+
+    void on_tbtnText_clicked();
+
+    void on_tbtnSpray_clicked();
+
+    void on_tbtnSwapColors_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

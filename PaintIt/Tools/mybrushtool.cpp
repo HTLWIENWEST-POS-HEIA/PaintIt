@@ -1,14 +1,13 @@
 #include "mybrushtool.h"
 
-QGraphicsItem* MyBrushTool::mousePressed(QGraphicsSceneMouseEvent *event, QPen myPrimaryPen, QPen mySecondaryPen) {
-    (void)mySecondaryPen;
+QGraphicsItem* MyBrushTool::mousePressed(QGraphicsSceneMouseEvent *event, MyToolProperties *myToolProperties) {
     if(event->button() == Qt::LeftButton) {
         firstPoint = event->lastScenePos().toPoint();
         painterPath = new QPainterPath;
         painterPath->moveTo(firstPoint);
         painterPath->lineTo(firstPoint.x() + 0.1, firstPoint.y());
         pathItem = new QGraphicsPathItem(*(painterPath));
-        pathItem->setPen(myPrimaryPen);
+        pathItem->setPen(myToolProperties->myPrimaryPen);
         return (QGraphicsItem*)pathItem;
     }
     return nullptr;

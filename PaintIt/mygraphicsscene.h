@@ -12,17 +12,12 @@ class ToolManager;
 
 class MyGraphicsScene : public QGraphicsScene{
 public:
-    MyGraphicsScene(QMainWindow *parent, QGraphicsView *graphicsView);
-    void setActiveTool (ToolBase *tool);
-    void setColor(QColor color, int which);
-    void setPenWidth(int width);
-
-private:
     ToolManager *tm;
+    MyGraphicsScene(QMainWindow *parent, QGraphicsView *graphicsView);
 
 protected:
-    void mousePressEvent(QGraphicsSceneMouseEvent *event);
     void mouseMoveEvent(QGraphicsSceneMouseEvent *event);
+    void mousePressEvent(QGraphicsSceneMouseEvent *event);
 };
 
 #endif

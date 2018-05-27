@@ -1,8 +1,16 @@
 #include "toolmanager.h"
 
 ToolManager::ToolManager(MyGraphicsScene *scene) : scene(scene) {
-    myPrimaryPen = new QPen(Qt::black, 1, Qt::SolidLine, Qt::RoundCap);
-    mySecondaryPen = new QPen(Qt::white, 1, Qt::SolidLine, Qt::RoundCap);
+    myToolProperties = new MyToolProperties();
+}
+
+void ToolManager::setMyRadius(int radius) {
+    myToolProperties->myRadius = radius;
+}
+
+void ToolManager::setLineWidth(int width) {
+    myToolProperties->myPrimaryPen.setWidth(width);
+    myToolProperties->mySecondaryPen.setWidth(width);
 }
 
 void ToolManager::setActiveTool(ToolBase *tool) {
@@ -10,27 +18,25 @@ void ToolManager::setActiveTool(ToolBase *tool) {
     activeTool = tool;
 }
 
-void ToolManager::mousePressed(QGraphicsSceneMouseEvent *event) {
-    if(activeTool == nullptr) return;
+void ToolManager::setColor(QColor color, int which) {
+    (which == 0) ? myToolProperties->myPrimaryPen.setColor(color) : myToolProperties->mySecondaryPen.setColor(color);
+}
 
-    QGraphicsPathItem* newItem = (QGraphicsPathItem*)activeTool->mousePressed(event, *(myPrimaryPen), *(mySecondaryPen));
+int ToolManager::getMyRadius() {
+    return myToolProperties->myRadius;
+}
+
+QColor ToolManager::getColor(int which) {
+    return (which == 0) ? myToolProperties->myPrimaryPen.color() : myToolProperties->mySecondaryPen.color();
+}
+
+void ToolManager::mousePressed(QGraphicsSceneMouseEvent *event) {
+    QGraphicsPathItem* newItem = (QGraphicsPathItem*)activeTool->mousePressed(event, myToolProperties);
     if(newItem == nullptr) return;
 
     scene->addItem(newItem);
 }
 
 void ToolManager::mouseMoved(QGraphicsSceneMouseEvent *event) {
-    if(activeTool == nullptr) return;
-
     activeTool->mouseMoved(event);
-}
-
-void ToolManager::setColor(QColor color, int which) {
-    if(which == 0) myPrimaryPen->setColor(color);
-    else mySecondaryPen->setColor(color);
-}
-
-void ToolManager::setPenWidth(int width) {
-    myPrimaryPen->setWidth(width);
-    mySecondaryPen->setWidth(width);
 }

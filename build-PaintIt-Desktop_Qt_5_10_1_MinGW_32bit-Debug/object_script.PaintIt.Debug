@@ -1,0 +1,14 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\mybrushtool.o
+./debug\mycircletool.o
+./debug\myerasetool.o
+./debug\myfillingtool.o
+./debug\myrectangletool.o
+./debug\mygraphicsscene.o
+./debug\toolmanager.o
+./debug\mainwindowactions.o
+./debug\qrc_resources.o
+./debug\moc_mainwindow.o
+);

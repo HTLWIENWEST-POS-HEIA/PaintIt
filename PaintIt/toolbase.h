@@ -3,11 +3,12 @@
 
 #include <QPen>
 #include <QGraphicsItem>
+#include "mytoolproperties.h"
 #include <QGraphicsSceneEvent>
 
 class ToolBase {
 public:
-    virtual QGraphicsItem* mousePressed(QGraphicsSceneMouseEvent *event, QPen myPrimaryPen, QPen mySecondaryPen) { (void)event; (void)myPrimaryPen; (void)mySecondaryPen; return nullptr; };
+    virtual QGraphicsItem* mousePressed(QGraphicsSceneMouseEvent *event, MyToolProperties *myToolProperties) { (void)event; (void)myToolProperties; return nullptr; };
     virtual void mouseMoved(QGraphicsSceneMouseEvent *event) { (void)event; };
     virtual ~ToolBase() = default;
 };

@@ -10,23 +10,26 @@
 
 #include "toolbase.h"
 #include "mygraphicsscene.h"
+#include "mytoolproperties.h"
 
 class MyGraphicsScene;
 
 class ToolManager {
 public:
-    ToolManager(MyGraphicsScene *scene);
+    int getMyRadius();
+    QColor getColor(int which);
+    void setMyRadius(int radius);
+    void setLineWidth(int width);
     void setActiveTool(ToolBase *tool);
-    void mousePressed(QGraphicsSceneMouseEvent *event);
-    void mouseMoved(QGraphicsSceneMouseEvent *event);
+    ToolManager(MyGraphicsScene *scene);
     void setColor(QColor color, int which);
-    void setPenWidth(int width);
+    void mouseMoved(QGraphicsSceneMouseEvent *event);
+    void mousePressed(QGraphicsSceneMouseEvent *event);
 
 private:
-    QPen *myPrimaryPen = nullptr;
-    QPen *mySecondaryPen = nullptr;
     ToolBase *activeTool = nullptr;
     MyGraphicsScene *scene = nullptr;
+    MyToolProperties *myToolProperties = nullptr;
 };
 
 #endif

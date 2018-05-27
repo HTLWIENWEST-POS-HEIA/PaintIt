@@ -9,7 +9,7 @@ class MyFillingTool : public ToolBase {
 public:
     MyFillingTool(QPixmap myPixmap);
     void mouseMoved(QGraphicsSceneMouseEvent *event);
-    QGraphicsItem *mousePressed(QGraphicsSceneMouseEvent *event, QPen myPrimaryPen, QPen mySecondaryPen);
+    QGraphicsItem *mousePressed(QGraphicsSceneMouseEvent *event, MyToolProperties *myToolProperties);
 
 private:
     QPoint origin;

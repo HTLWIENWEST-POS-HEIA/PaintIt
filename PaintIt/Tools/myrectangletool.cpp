@@ -1,14 +1,14 @@
 #include "myrectangletool.h"
 #include <QDebug>
 
-QGraphicsItem* MyRectangleTool::mousePressed(QGraphicsSceneMouseEvent *event, QPen myPrimaryPen, QPen mySecondaryPen) {
+QGraphicsItem* MyRectangleTool::mousePressed(QGraphicsSceneMouseEvent *event, MyToolProperties *myToolProperties) {
     if(event->button() == Qt::LeftButton) {
         firstPoint = event->lastScenePos().toPoint();
 
         myRect = new QRect(firstPoint.x(), firstPoint.y(), 0, 0);
         myRectItem = new QGraphicsRectItem(*(myRect));
-        myRectItem->setPen(myPrimaryPen);
-        myRectItem->setBrush(mySecondaryPen.color());
+        myRectItem->setPen(myToolProperties->myPrimaryPen);
+        myRectItem->setBrush(myToolProperties->mySecondaryPen.color());
         return (QGraphicsItem*)myRectItem;
     }
     return nullptr;

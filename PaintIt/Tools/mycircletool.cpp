@@ -1,12 +1,12 @@
 #include "mycircletool.h"
 
-QGraphicsItem* MyCircleTool::mousePressed(QGraphicsSceneMouseEvent *event, QPen myPrimaryPen, QPen mySecondaryPen) {
+QGraphicsItem* MyCircleTool::mousePressed(QGraphicsSceneMouseEvent *event, MyToolProperties *myToolProperties) {
     if(event->button() == Qt::LeftButton) {
         firstPoint = event->lastScenePos().toPoint();
         myRect = new QRect(firstPoint.x(), firstPoint.y(), 0, 0);
         myEllipseItem = new QGraphicsEllipseItem(*(myRect));
-        myEllipseItem->setPen(myPrimaryPen);
-        myEllipseItem->setBrush(mySecondaryPen.color());
+        myEllipseItem->setPen(myToolProperties->myPrimaryPen);
+        myEllipseItem->setBrush(myToolProperties->mySecondaryPen.color());
         return (QGraphicsItem*)myEllipseItem;
     }
     return nullptr;

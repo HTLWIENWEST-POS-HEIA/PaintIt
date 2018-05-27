@@ -1,12 +1,11 @@
 #include "myerasetool.h"
 
-QGraphicsItem* MyEraseTool::mousePressed(QGraphicsSceneMouseEvent *event, QPen myPrimaryPen, QPen mySecondaryPen) {
-    (void)mySecondaryPen;
+QGraphicsItem* MyEraseTool::mousePressed(QGraphicsSceneMouseEvent *event, MyToolProperties *myToolProperties) {
     if(event->button() == Qt::LeftButton) {
         firstPoint = event->lastScenePos().toPoint();
         painterPath = new QPainterPath;
         pathItem = new QGraphicsPathItem(*(painterPath));
-        pathItem->setPen(QPen(Qt::white, myPrimaryPen.width(), myPrimaryPen.style(), myPrimaryPen.capStyle()));
+        pathItem->setPen(QPen(Qt::white, myToolProperties->myPrimaryPen.width(), myToolProperties->myPrimaryPen.style(), myToolProperties->myPrimaryPen.capStyle()));
         return (QGraphicsItem*)pathItem;
     }
     return nullptr;

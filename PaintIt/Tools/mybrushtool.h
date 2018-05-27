@@ -10,7 +10,7 @@ private:
     QPainterPath *painterPath;
 
 public:
-    QGraphicsItem* mousePressed(QGraphicsSceneMouseEvent *event, QPen myPrimaryPen, QPen mySecondaryPen);
+    QGraphicsItem* mousePressed(QGraphicsSceneMouseEvent *event, MyToolProperties *myToolProperties);
     void mouseMoved(QGraphicsSceneMouseEvent *event);
 };
 

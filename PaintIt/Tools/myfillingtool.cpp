@@ -4,13 +4,11 @@ MyFillingTool::MyFillingTool(QPixmap myPixmap) {
     myImage = myPixmap.toImage();
 }
 
-QGraphicsItem* MyFillingTool::mousePressed(QGraphicsSceneMouseEvent *event, QPen myPrimaryPen, QPen mySecondaryPen) {
+QGraphicsItem* MyFillingTool::mousePressed(QGraphicsSceneMouseEvent *event, MyToolProperties *myToolProperties) {
     if(event->button() == Qt::LeftButton) {
-        fill(event->lastScenePos().x(), event->lastScenePos().y(), myPrimaryPen.color());
+        fill(event->lastScenePos().x(), event->lastScenePos().y(), myToolProperties->myPrimaryPen.color());
         return (QGraphicsItem*)myPixmapItem;
     }
-    (void)myPrimaryPen;
-    (void)mySecondaryPen;
     return nullptr;
 }
 

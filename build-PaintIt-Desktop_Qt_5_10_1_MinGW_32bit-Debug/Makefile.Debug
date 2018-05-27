@@ -132,13 +132,25 @@ compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_resources.cpp
 debug/qrc_resources.cpp: ../PaintIt/resources.qrc \
 		D:/Programme/Qt/5.10.1/mingw53_32/bin/rcc.exe \
-		../PaintIt/icons/Line-Tool-512.png \
-		../PaintIt/icons/stamp-512.png \
+		../PaintIt/icons/brush2.png \
 		../PaintIt/icons/brush.png \
+		../PaintIt/icons/spray2.png \
+		../PaintIt/icons/text2.png \
+		../PaintIt/icons/ellipse2.png \
+		../PaintIt/icons/eraser2.png \
+		../PaintIt/icons/rect.png \
+		../PaintIt/icons/swap.png \
+		../PaintIt/icons/ellipse.png \
+		../PaintIt/icons/stamp.png \
+		../PaintIt/icons/line2.png \
+		../PaintIt/icons/stamp2.png \
 		../PaintIt/icons/spray.png \
-		../PaintIt/icons/Editing-Text-icon.png \
-		../PaintIt/icons/fill-color.png \
-		../PaintIt/icons/swap.png
+		../PaintIt/icons/rect2.png \
+		../PaintIt/icons/fill2.png \
+		../PaintIt/icons/text.png \
+		../PaintIt/icons/eraser.png \
+		../PaintIt/icons/fill.png \
+		../PaintIt/icons/line.png
 	D:\Programme\Qt\5.10.1\mingw53_32\bin\rcc.exe -name resources ..\PaintIt\resources.qrc -o debug\qrc_resources.cpp
 
 compiler_moc_predefs_make_all: debug/moc_predefs.h
@@ -262,6 +274,9 @@ debug/moc_mainwindow.cpp: D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/QColor
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QColorDialog \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qcolordialog.h \
+		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QToolButton \
+		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qtoolbutton.h \
+		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		../PaintIt/mygraphicsscene.h \
 		../PaintIt/toolmanager.h \
 		../PaintIt/Tools/myerasetool.h \
@@ -270,6 +285,7 @@ debug/moc_mainwindow.cpp: D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/QColor
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/qpen.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsItem \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicsitem.h \
+		../PaintIt/mytoolproperties.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsSceneEvent \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicssceneevent.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsPathItem \
@@ -281,7 +297,6 @@ debug/moc_mainwindow.cpp: D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/QColor
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/QPixmap \
 		../PaintIt/Tools/myrectangletool.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsRectItem \
-		../PaintIt/mytoolproperties.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsView \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicsview.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/qpainter.h \
@@ -433,6 +448,9 @@ debug/main.o: ../PaintIt/main.cpp ../PaintIt/mainwindow.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QColorDialog \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qcolordialog.h \
+		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QToolButton \
+		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qtoolbutton.h \
+		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		../PaintIt/mygraphicsscene.h \
 		../PaintIt/toolmanager.h \
 		../PaintIt/Tools/myerasetool.h \
@@ -441,6 +459,7 @@ debug/main.o: ../PaintIt/main.cpp ../PaintIt/mainwindow.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/qpen.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsItem \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicsitem.h \
+		../PaintIt/mytoolproperties.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsSceneEvent \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicssceneevent.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsPathItem \
@@ -452,7 +471,6 @@ debug/main.o: ../PaintIt/main.cpp ../PaintIt/mainwindow.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/QPixmap \
 		../PaintIt/Tools/myrectangletool.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsRectItem \
-		../PaintIt/mytoolproperties.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsView \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicsview.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/qpainter.h \
@@ -585,6 +603,9 @@ debug/mainwindow.o: ../PaintIt/mainwindow.cpp ../PaintIt/mainwindow.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QColorDialog \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qcolordialog.h \
+		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QToolButton \
+		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qtoolbutton.h \
+		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		../PaintIt/mygraphicsscene.h \
 		../PaintIt/toolmanager.h \
 		../PaintIt/Tools/myerasetool.h \
@@ -593,6 +614,7 @@ debug/mainwindow.o: ../PaintIt/mainwindow.cpp ../PaintIt/mainwindow.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/qpen.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsItem \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicsitem.h \
+		../PaintIt/mytoolproperties.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsSceneEvent \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicssceneevent.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsPathItem \
@@ -604,7 +626,6 @@ debug/mainwindow.o: ../PaintIt/mainwindow.cpp ../PaintIt/mainwindow.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/QPixmap \
 		../PaintIt/Tools/myrectangletool.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsRectItem \
-		../PaintIt/mytoolproperties.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsView \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicsview.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/qpainter.h \
@@ -615,59 +636,7 @@ debug/mainwindow.o: ../PaintIt/mainwindow.cpp ../PaintIt/mainwindow.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicsscene.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsScene \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsSceneMouseEvent \
-		ui_mainwindow.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/QVariant \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QAction \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qaction.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qactiongroup.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QApplication \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qapplication.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qcoreapplication.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qeventloop.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/qinputmethod.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QButtonGroup \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qbuttongroup.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QFrame \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QHBoxLayout \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qboxlayout.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qlayout.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgridlayout.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QHeaderView \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qheaderview.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qabstractitemview.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qitemselectionmodel.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qstyleoption.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qabstractspinbox.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/qvalidator.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qregularexpression.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qslider.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qabstractslider.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qstyle.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qtabbar.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qrubberband.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QLabel \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qlabel.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QMenu \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qmenu.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QMenuBar \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QSpacerItem \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QSpinBox \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qspinbox.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QStatusBar \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qstatusbar.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QToolBar \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qtoolbar.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QToolButton \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qtoolbutton.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QVBoxLayout \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QWidget
+		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindow.o ..\PaintIt\mainwindow.cpp
 
 debug/mybrushtool.o: ../PaintIt/Tools/mybrushtool.cpp ../PaintIt/Tools/mybrushtool.h \
@@ -763,6 +732,7 @@ debug/mybrushtool.o: ../PaintIt/Tools/mybrushtool.cpp ../PaintIt/Tools/mybrushto
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qlocale.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qset.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qcontiguouscache.h \
+		../PaintIt/mytoolproperties.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsSceneEvent \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicssceneevent.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mybrushtool.o ..\PaintIt\Tools\mybrushtool.cpp
@@ -861,6 +831,7 @@ debug/mycircletool.o: ../PaintIt/Tools/mycircletool.cpp ../PaintIt/Tools/mycircl
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qlocale.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qset.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qcontiguouscache.h \
+		../PaintIt/mytoolproperties.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsSceneEvent \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicssceneevent.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsEllipseItem
@@ -959,6 +930,7 @@ debug/myerasetool.o: ../PaintIt/Tools/myerasetool.cpp ../PaintIt/Tools/myeraseto
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qlocale.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qset.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qcontiguouscache.h \
+		../PaintIt/mytoolproperties.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsSceneEvent \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicssceneevent.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsPathItem
@@ -1058,6 +1030,7 @@ debug/myfillingtool.o: ../PaintIt/Tools/myfillingtool.cpp ../PaintIt/Tools/myfil
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qlocale.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qset.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qcontiguouscache.h \
+		../PaintIt/mytoolproperties.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsSceneEvent \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicssceneevent.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\myfillingtool.o ..\PaintIt\Tools\myfillingtool.cpp
@@ -1155,6 +1128,7 @@ debug/myrectangletool.o: ../PaintIt/Tools/myrectangletool.cpp ../PaintIt/Tools/m
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qlocale.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qset.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qcontiguouscache.h \
+		../PaintIt/mytoolproperties.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsSceneEvent \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicssceneevent.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsRectItem \
@@ -1275,6 +1249,7 @@ debug/mygraphicsscene.o: ../PaintIt/mygraphicsscene.cpp ../PaintIt/mygraphicssce
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/qpen.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsItem \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicsitem.h \
+		../PaintIt/mytoolproperties.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsSceneEvent \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicssceneevent.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsPathItem \
@@ -1286,7 +1261,6 @@ debug/mygraphicsscene.o: ../PaintIt/mygraphicsscene.cpp ../PaintIt/mygraphicssce
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/QPixmap \
 		../PaintIt/Tools/myrectangletool.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsRectItem \
-		../PaintIt/mytoolproperties.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsView \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicsview.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/qpainter.h \
@@ -1393,6 +1367,7 @@ debug/toolmanager.o: ../PaintIt/toolmanager.cpp ../PaintIt/toolmanager.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qlocale.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qset.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qcontiguouscache.h \
+		../PaintIt/mytoolproperties.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsSceneEvent \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicssceneevent.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsPathItem \
@@ -1433,8 +1408,7 @@ debug/toolmanager.o: ../PaintIt/toolmanager.cpp ../PaintIt/toolmanager.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qframe.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicsscene.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsScene \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsSceneMouseEvent \
-		../PaintIt/mytoolproperties.h
+		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsSceneMouseEvent
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\toolmanager.o ..\PaintIt\toolmanager.cpp
 
 debug/mainwindowactions.o: ../PaintIt/mainwindowactions.cpp ../PaintIt/mainwindow.h \
@@ -1550,6 +1524,9 @@ debug/mainwindowactions.o: ../PaintIt/mainwindowactions.cpp ../PaintIt/mainwindo
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qdialog.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QColorDialog \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qcolordialog.h \
+		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QToolButton \
+		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qtoolbutton.h \
+		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
 		../PaintIt/mygraphicsscene.h \
 		../PaintIt/toolmanager.h \
 		../PaintIt/Tools/myerasetool.h \
@@ -1558,6 +1535,7 @@ debug/mainwindowactions.o: ../PaintIt/mainwindowactions.cpp ../PaintIt/mainwindo
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/qpen.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsItem \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicsitem.h \
+		../PaintIt/mytoolproperties.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsSceneEvent \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicssceneevent.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsPathItem \
@@ -1569,7 +1547,6 @@ debug/mainwindowactions.o: ../PaintIt/mainwindowactions.cpp ../PaintIt/mainwindo
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/QPixmap \
 		../PaintIt/Tools/myrectangletool.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsRectItem \
-		../PaintIt/mytoolproperties.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsView \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicsview.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/qpainter.h \
@@ -1580,59 +1557,7 @@ debug/mainwindowactions.o: ../PaintIt/mainwindowactions.cpp ../PaintIt/mainwindo
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgraphicsscene.h \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsScene \
 		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QGraphicsSceneMouseEvent \
-		ui_mainwindow.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/QVariant \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QAction \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qaction.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qactiongroup.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QApplication \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qapplication.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qcoreapplication.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qeventloop.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qdesktopwidget.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/qguiapplication.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/qinputmethod.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QButtonGroup \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qbuttongroup.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QFrame \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QHBoxLayout \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qboxlayout.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qlayout.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qlayoutitem.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qgridlayout.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QHeaderView \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qheaderview.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qabstractitemview.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qabstractitemmodel.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qitemselectionmodel.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qstyleoption.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qabstractspinbox.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtGui/qvalidator.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtCore/qregularexpression.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qslider.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qabstractslider.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qstyle.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qtabbar.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qrubberband.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QLabel \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qlabel.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QMenu \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qmenu.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QMenuBar \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qmenubar.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QSpacerItem \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QSpinBox \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qspinbox.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QStatusBar \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qstatusbar.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QToolBar \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qtoolbar.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QToolButton \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qtoolbutton.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/qabstractbutton.h \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QVBoxLayout \
-		D:/Programme/Qt/5.10.1/mingw53_32/include/QtWidgets/QWidget
+		ui_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\mainwindowactions.o ..\PaintIt\mainwindowactions.cpp
 
 debug/qrc_resources.o: debug/qrc_resources.cpp 

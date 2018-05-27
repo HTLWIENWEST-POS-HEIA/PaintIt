@@ -212,7 +212,6 @@ Makefile: ../PaintIt/PaintIt.pro D:/Programme/Qt/5.10.1/mingw53_32/mkspecs/win32
 		D:/Programme/Qt/5.10.1/mingw53_32/mkspecs/features/qt_config.prf \
 		D:/Programme/Qt/5.10.1/mingw53_32/mkspecs/win32-g++/qmake.conf \
 		D:/Programme/Qt/5.10.1/mingw53_32/mkspecs/features/spec_post.prf \
-		.qmake.stash \
 		D:/Programme/Qt/5.10.1/mingw53_32/mkspecs/features/exclusive_builds.prf \
 		D:/Programme/Qt/5.10.1/mingw53_32/mkspecs/features/toolchain.prf \
 		D:/Programme/Qt/5.10.1/mingw53_32/mkspecs/features/default_pre.prf \
@@ -392,7 +391,6 @@ D:/Programme/Qt/5.10.1/mingw53_32/mkspecs/features/qt_functions.prf:
 D:/Programme/Qt/5.10.1/mingw53_32/mkspecs/features/qt_config.prf:
 D:/Programme/Qt/5.10.1/mingw53_32/mkspecs/win32-g++/qmake.conf:
 D:/Programme/Qt/5.10.1/mingw53_32/mkspecs/features/spec_post.prf:
-.qmake.stash:
 D:/Programme/Qt/5.10.1/mingw53_32/mkspecs/features/exclusive_builds.prf:
 D:/Programme/Qt/5.10.1/mingw53_32/mkspecs/features/toolchain.prf:
 D:/Programme/Qt/5.10.1/mingw53_32/mkspecs/features/default_pre.prf:

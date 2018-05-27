@@ -19,5 +19,6 @@
         <file>icons/rect2.png</file>
         <file>icons/ellipse.png</file>
         <file>icons/ellipse2.png</file>
+        <file>icons/paintit.png</file>
     </qresource>
 </RCC>

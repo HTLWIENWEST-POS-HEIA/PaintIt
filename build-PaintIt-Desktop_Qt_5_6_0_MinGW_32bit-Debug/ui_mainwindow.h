@@ -13,14 +13,20 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QFrame>
 #include <QtWidgets/QGraphicsView>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
+#include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QToolButton>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -35,8 +41,28 @@ public:
     QAction *action_ber_PaintIt;
     QWidget *centralWidget;
     QGraphicsView *graphicsView;
+    QFrame *frame;
+    QToolButton *tbtnLine;
+    QToolButton *tbtnStamp;
+    QToolButton *tbtnBrush;
+    QToolButton *tbtnFill;
+    QToolButton *tbtnText;
+    QToolButton *tbtnSpray;
     QToolButton *tbtnForegroundColor;
     QToolButton *tbtnBackgroundColor;
+    QToolButton *tbtnSwapColors;
+    QToolButton *tbtnRect;
+    QToolButton *tbtnEllipse;
+    QToolButton *tbtnEraser;
+    QWidget *verticalLayoutWidget;
+    QVBoxLayout *verticalLayout;
+    QHBoxLayout *horizontalLayout;
+    QLabel *lbllineWidth;
+    QSpinBox *spinBox_LineWidth;
+    QHBoxLayout *horizontalLayout_2;
+    QLabel *lblRadius;
+    QSpinBox *spinBox_Radius;
+    QSpacerItem *verticalSpacer;
     QMenuBar *menuBar;
     QMenu *menu_Datei;
     QMenu *menu_Extras;
@@ -64,12 +90,144 @@ public:
         graphicsView = new QGraphicsView(centralWidget);
         graphicsView->setObjectName(QStringLiteral("graphicsView"));
         graphicsView->setGeometry(QRect(10, 10, 1024, 768));
-        tbtnForegroundColor = new QToolButton(centralWidget);
+        frame = new QFrame(centralWidget);
+        frame->setObjectName(QStringLiteral("frame"));
+        frame->setGeometry(QRect(1040, 10, 111, 321));
+        frame->setAutoFillBackground(false);
+        frame->setStyleSheet(QStringLiteral("background-color: rgb(171, 171, 171);"));
+        frame->setFrameShape(QFrame::NoFrame);
+        frame->setFrameShadow(QFrame::Raised);
+        tbtnLine = new QToolButton(frame);
+        tbtnLine->setObjectName(QStringLiteral("tbtnLine"));
+        tbtnLine->setGeometry(QRect(10, 10, 30, 30));
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/icons/icons/line.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tbtnLine->setIcon(icon);
+        tbtnLine->setIconSize(QSize(20, 20));
+        tbtnStamp = new QToolButton(frame);
+        tbtnStamp->setObjectName(QStringLiteral("tbtnStamp"));
+        tbtnStamp->setGeometry(QRect(40, 10, 30, 30));
+        QIcon icon1;
+        icon1.addFile(QStringLiteral(":/icons/icons/stamp.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tbtnStamp->setIcon(icon1);
+        tbtnStamp->setIconSize(QSize(20, 20));
+        tbtnBrush = new QToolButton(frame);
+        tbtnBrush->setObjectName(QStringLiteral("tbtnBrush"));
+        tbtnBrush->setGeometry(QRect(70, 10, 30, 30));
+        QIcon icon2;
+        icon2.addFile(QStringLiteral(":/icons/icons/brush.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tbtnBrush->setIcon(icon2);
+        tbtnBrush->setIconSize(QSize(20, 20));
+        tbtnFill = new QToolButton(frame);
+        tbtnFill->setObjectName(QStringLiteral("tbtnFill"));
+        tbtnFill->setGeometry(QRect(10, 40, 30, 30));
+        QIcon icon3;
+        icon3.addFile(QStringLiteral(":/icons/icons/fill.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tbtnFill->setIcon(icon3);
+        tbtnFill->setIconSize(QSize(20, 20));
+        tbtnText = new QToolButton(frame);
+        tbtnText->setObjectName(QStringLiteral("tbtnText"));
+        tbtnText->setGeometry(QRect(40, 40, 30, 30));
+        QIcon icon4;
+        icon4.addFile(QStringLiteral(":/icons/icons/text.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tbtnText->setIcon(icon4);
+        tbtnText->setIconSize(QSize(20, 20));
+        tbtnSpray = new QToolButton(frame);
+        tbtnSpray->setObjectName(QStringLiteral("tbtnSpray"));
+        tbtnSpray->setGeometry(QRect(70, 40, 30, 30));
+        QIcon icon5;
+        icon5.addFile(QStringLiteral(":/icons/icons/spray.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tbtnSpray->setIcon(icon5);
+        tbtnSpray->setIconSize(QSize(20, 20));
+        tbtnForegroundColor = new QToolButton(frame);
         tbtnForegroundColor->setObjectName(QStringLiteral("tbtnForegroundColor"));
-        tbtnForegroundColor->setGeometry(QRect(1050, 338, 20, 20));
-        tbtnBackgroundColor = new QToolButton(centralWidget);
+        tbtnForegroundColor->setGeometry(QRect(10, 270, 20, 20));
+        tbtnBackgroundColor = new QToolButton(frame);
         tbtnBackgroundColor->setObjectName(QStringLiteral("tbtnBackgroundColor"));
-        tbtnBackgroundColor->setGeometry(QRect(1070, 360, 20, 20));
+        tbtnBackgroundColor->setGeometry(QRect(30, 290, 20, 20));
+        tbtnSwapColors = new QToolButton(frame);
+        tbtnSwapColors->setObjectName(QStringLiteral("tbtnSwapColors"));
+        tbtnSwapColors->setGeometry(QRect(30, 270, 20, 20));
+        QIcon icon6;
+        icon6.addFile(QStringLiteral(":/icons/icons/swap.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tbtnSwapColors->setIcon(icon6);
+        tbtnRect = new QToolButton(frame);
+        tbtnRect->setObjectName(QStringLiteral("tbtnRect"));
+        tbtnRect->setGeometry(QRect(10, 70, 30, 30));
+        QIcon icon7;
+        icon7.addFile(QStringLiteral(":/icons/icons/rect.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tbtnRect->setIcon(icon7);
+        tbtnRect->setIconSize(QSize(20, 20));
+        tbtnEllipse = new QToolButton(frame);
+        tbtnEllipse->setObjectName(QStringLiteral("tbtnEllipse"));
+        tbtnEllipse->setGeometry(QRect(40, 70, 30, 30));
+        QIcon icon8;
+        icon8.addFile(QStringLiteral(":/icons/icons/ellipse.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tbtnEllipse->setIcon(icon8);
+        tbtnEllipse->setIconSize(QSize(20, 20));
+        tbtnEraser = new QToolButton(frame);
+        tbtnEraser->setObjectName(QStringLiteral("tbtnEraser"));
+        tbtnEraser->setGeometry(QRect(70, 70, 30, 30));
+        QIcon icon9;
+        icon9.addFile(QStringLiteral(":/icons/icons/eraser.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tbtnEraser->setIcon(icon9);
+        tbtnEraser->setIconSize(QSize(20, 20));
+        verticalLayoutWidget = new QWidget(centralWidget);
+        verticalLayoutWidget->setObjectName(QStringLiteral("verticalLayoutWidget"));
+        verticalLayoutWidget->setGeometry(QRect(1039, 340, 111, 431));
+        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
+        verticalLayout->setSpacing(6);
+        verticalLayout->setContentsMargins(11, 11, 11, 11);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setSizeConstraint(QLayout::SetDefaultConstraint);
+        lbllineWidth = new QLabel(verticalLayoutWidget);
+        lbllineWidth->setObjectName(QStringLiteral("lbllineWidth"));
+
+        horizontalLayout->addWidget(lbllineWidth);
+
+        spinBox_LineWidth = new QSpinBox(verticalLayoutWidget);
+        spinBox_LineWidth->setObjectName(QStringLiteral("spinBox_LineWidth"));
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(spinBox_LineWidth->sizePolicy().hasHeightForWidth());
+        spinBox_LineWidth->setSizePolicy(sizePolicy);
+        spinBox_LineWidth->setMaximum(100);
+        spinBox_LineWidth->setValue(1);
+
+        horizontalLayout->addWidget(spinBox_LineWidth);
+
+
+        verticalLayout->addLayout(horizontalLayout);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setSpacing(6);
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        lblRadius = new QLabel(verticalLayoutWidget);
+        lblRadius->setObjectName(QStringLiteral("lblRadius"));
+
+        horizontalLayout_2->addWidget(lblRadius);
+
+        spinBox_Radius = new QSpinBox(verticalLayoutWidget);
+        spinBox_Radius->setObjectName(QStringLiteral("spinBox_Radius"));
+        sizePolicy.setHeightForWidth(spinBox_Radius->sizePolicy().hasHeightForWidth());
+        spinBox_Radius->setSizePolicy(sizePolicy);
+        spinBox_Radius->setMaximum(100);
+        spinBox_Radius->setValue(20);
+
+        horizontalLayout_2->addWidget(spinBox_Radius);
+
+
+        verticalLayout->addLayout(horizontalLayout_2);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer);
+
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -111,8 +269,20 @@ public:
         action_Beenden->setText(QApplication::translate("MainWindow", "&Beenden", 0));
         action_Optionen->setText(QApplication::translate("MainWindow", "&Optionen", 0));
         action_ber_PaintIt->setText(QApplication::translate("MainWindow", "&\303\234ber PaintIt", 0));
+        tbtnLine->setText(QApplication::translate("MainWindow", "...", 0));
+        tbtnStamp->setText(QApplication::translate("MainWindow", "...", 0));
+        tbtnBrush->setText(QApplication::translate("MainWindow", "...", 0));
+        tbtnFill->setText(QApplication::translate("MainWindow", "...", 0));
+        tbtnText->setText(QApplication::translate("MainWindow", "...", 0));
+        tbtnSpray->setText(QApplication::translate("MainWindow", "...", 0));
         tbtnForegroundColor->setText(QString());
         tbtnBackgroundColor->setText(QString());
+        tbtnSwapColors->setText(QString());
+        tbtnRect->setText(QApplication::translate("MainWindow", "...", 0));
+        tbtnEllipse->setText(QApplication::translate("MainWindow", "...", 0));
+        tbtnEraser->setText(QApplication::translate("MainWindow", "...", 0));
+        lbllineWidth->setText(QApplication::translate("MainWindow", "Linienst\303\244rke", 0));
+        lblRadius->setText(QApplication::translate("MainWindow", "Radius", 0));
         menu_Datei->setTitle(QApplication::translate("MainWindow", "&Datei", 0));
         menu_Extras->setTitle(QApplication::translate("MainWindow", "&Extras", 0));
         menu_Hilfe->setTitle(QApplication::translate("MainWindow", "&Hilfe", 0));

@@ -5,6 +5,7 @@
 #include <QMainWindow>
 #include <QMessageBox>
 #include <QColorDialog>
+#include <QToolButton>
 #include "mygraphicsscene.h"
 
 namespace Ui {
@@ -32,10 +33,20 @@ private slots:
     void on_spinBox_Radius_valueChanged(int radius);
     void on_spinBox_LineWidth_valueChanged(int lineWidth);
 
+    void on_tbtnRect_clicked();
+
+    void on_tbtnEllipse_clicked();
+
+    void on_tbtnEraser_clicked();
+
 private:
     Ui::MainWindow *ui;
+    void deselectPrevious();
+    void select(QObject *tbtn, QString resource);
     void createScene();
     MyGraphicsScene *scene = nullptr;
+    QString selectedTool = "none";
+    QSize toolIconSize = QSize(20,20);
 };
 
 #endif // MAINWINDOW_H

@@ -109,6 +109,7 @@ void MainWindow::on_tbtnRect_clicked()
     deselectPrevious();
     select(sender(),":/icons/icons/rect2.png");
     selectedTool = "rect";
+    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyRectangleTool()));
 }
 
 void MainWindow::on_tbtnEllipse_clicked()
@@ -116,6 +117,7 @@ void MainWindow::on_tbtnEllipse_clicked()
     deselectPrevious();
     select(sender(),":/icons/icons/ellipse2.png");
     selectedTool = "ellipse";
+    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyCircleTool()));
 }
 
 void MainWindow::on_tbtnEraser_clicked()
@@ -123,6 +125,7 @@ void MainWindow::on_tbtnEraser_clicked()
     deselectPrevious();
     select(sender(),":/icons/icons/eraser2.png");
     selectedTool = "eraser";
+    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyEraseTool()));
 }
 
 

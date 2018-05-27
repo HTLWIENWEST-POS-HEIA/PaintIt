@@ -3,7 +3,7 @@
 
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
-
+    this->statusBar()->setSizeGripEnabled(false);
     show();
     ui->graphicsView->setAlignment(Qt::AlignTop | Qt::AlignLeft);
     createScene();

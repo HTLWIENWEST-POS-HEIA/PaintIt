@@ -75,6 +75,13 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->resize(1164, 835);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
+        MainWindow->setSizePolicy(sizePolicy);
+        MainWindow->setMinimumSize(QSize(1164, 835));
+        MainWindow->setMaximumSize(QSize(1164, 835));
         action_ffnen = new QAction(MainWindow);
         action_ffnen->setObjectName(QStringLiteral("action_ffnen"));
         action_Speichern_unter = new QAction(MainWindow);
@@ -191,11 +198,11 @@ public:
 
         spinBox_LineWidth = new QSpinBox(verticalLayoutWidget);
         spinBox_LineWidth->setObjectName(QStringLiteral("spinBox_LineWidth"));
-        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(spinBox_LineWidth->sizePolicy().hasHeightForWidth());
-        spinBox_LineWidth->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(spinBox_LineWidth->sizePolicy().hasHeightForWidth());
+        spinBox_LineWidth->setSizePolicy(sizePolicy1);
         spinBox_LineWidth->setMaximum(100);
         spinBox_LineWidth->setValue(1);
 
@@ -214,8 +221,8 @@ public:
 
         spinBox_Radius = new QSpinBox(verticalLayoutWidget);
         spinBox_Radius->setObjectName(QStringLiteral("spinBox_Radius"));
-        sizePolicy.setHeightForWidth(spinBox_Radius->sizePolicy().hasHeightForWidth());
-        spinBox_Radius->setSizePolicy(sizePolicy);
+        sizePolicy1.setHeightForWidth(spinBox_Radius->sizePolicy().hasHeightForWidth());
+        spinBox_Radius->setSizePolicy(sizePolicy1);
         spinBox_Radius->setMaximum(100);
         spinBox_Radius->setValue(20);
 

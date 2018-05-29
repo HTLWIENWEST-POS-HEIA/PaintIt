@@ -1,5 +1,8 @@
 #ifndef MYTOOLPROPERTIES_H
 #define MYTOOLPROPERTIES_H
+#ifndef nullptr
+#define nullptr 0
+#endif
 
 #include <QPen>
 

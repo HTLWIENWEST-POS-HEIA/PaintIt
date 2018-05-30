@@ -22,7 +22,8 @@ SOURCES += main.cpp\
     Tools/myrectangletool.cpp \
     mygraphicsscene.cpp \
     toolmanager.cpp \
-    mainwindowactions.cpp
+    mainwindowactions.cpp \
+    Tools/mytexttool.cpp
 
 HEADERS  += mainwindow.h \
     Tools/mybrushtool.h \
@@ -33,7 +34,8 @@ HEADERS  += mainwindow.h \
     mygraphicsscene.h \
     toolbase.h \
     toolmanager.h \
-    mytoolproperties.h
+    mytoolproperties.h \
+    Tools/mytexttool.h
 
 FORMS    += mainwindow.ui
 

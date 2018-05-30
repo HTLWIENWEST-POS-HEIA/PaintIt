@@ -25,6 +25,10 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->tbtnRect->setIconSize(toolIconSize);
     ui->tbtnEllipse->setIconSize(toolIconSize);
     ui->tbtnEraser->setIconSize(toolIconSize);
+
+    // Initialize Startup-Tool
+    selectedTool = "brush";
+    select((QObject*)ui->tbtnBrush, ":/icons/icons/brush2.png");
 }
 
 void MainWindow::createScene() {
@@ -101,8 +105,7 @@ void MainWindow::deselectPrevious() {
     }
 }
 
-void MainWindow::select(QObject *tbtn, QString resource)
-{
+void MainWindow::select(QObject *tbtn, QString resource) {
     QPixmap pixmap(resource);
     QIcon ButtonIcon(pixmap);
     //QMessageBox::information(this,"Information",tbtn->objectName(),QMessageBox::Ok);

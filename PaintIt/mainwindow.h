@@ -4,8 +4,9 @@
 #include <QColor>
 #include <QMainWindow>
 #include <QMessageBox>
-#include <QColorDialog>
 #include <QToolButton>
+#include <QFontDialog>
+#include <QColorDialog>
 #include "mygraphicsscene.h"
 
 namespace Ui {
@@ -23,9 +24,13 @@ private slots:
     void on_tbtnLine_clicked();
     void on_tbtnFill_clicked();
     void on_tbtnText_clicked();
+    void on_tbtnRect_clicked();
     void on_tbtnStamp_clicked();
     void on_tbtnBrush_clicked();
     void on_tbtnSpray_clicked();
+    void on_tbtnEraser_clicked();
+    void on_tbtnEllipse_clicked();
+    void on_pb_fontDialog_clicked();
     void on_tbtnSwapColors_clicked();
     void on_action_Beenden_triggered();
     void on_tbtnForegroundColor_clicked();
@@ -33,20 +38,14 @@ private slots:
     void on_spinBox_Radius_valueChanged(int radius);
     void on_spinBox_LineWidth_valueChanged(int lineWidth);
 
-    void on_tbtnRect_clicked();
-
-    void on_tbtnEllipse_clicked();
-
-    void on_tbtnEraser_clicked();
-
 private:
     Ui::MainWindow *ui;
-    void deselectPrevious();
-    void select(QObject *tbtn, QString resource);
     void createScene();
-    MyGraphicsScene *scene = nullptr;
+    void deselectPrevious();
     QString selectedTool = "none";
+    MyGraphicsScene *scene = nullptr;
     QSize toolIconSize = QSize(20,20);
+    void select(QObject *tbtn, QString resource);
 };
 
 #endif // MAINWINDOW_H

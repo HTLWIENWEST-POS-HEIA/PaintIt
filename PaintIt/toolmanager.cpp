@@ -22,8 +22,16 @@ void ToolManager::setColor(QColor color, int which) {
     (which == 0) ? myToolProperties->myPrimaryPen.setColor(color) : myToolProperties->mySecondaryPen.setColor(color);
 }
 
+QFont ToolManager::getFont() {
+    return myToolProperties->myFont;
+}
+
 int ToolManager::getMyRadius() {
     return myToolProperties->myRadius;
+}
+
+void ToolManager::setFont(QFont font) {
+    myToolProperties->myFont = font;
 }
 
 QColor ToolManager::getColor(int which) {

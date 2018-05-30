@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QDebug>
 
 // #######################
 // Menu-Bar
@@ -94,6 +95,7 @@ void MainWindow::on_tbtnText_clicked() {
     deselectPrevious();
     select(sender(),":/icons/icons/text2.png");
     selectedTool = "text";
+    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyTextTool()));
     //QMessageBox::information(this,"Information","TextTool is selected",QMessageBox::Ok);
 }
 
@@ -128,7 +130,6 @@ void MainWindow::on_tbtnEraser_clicked()
     scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyEraseTool()));
 }
 
-
 // #######################
 // Sonstige Elemente
 // #######################
@@ -138,4 +139,11 @@ void MainWindow::on_spinBox_Radius_valueChanged(int radius) {
 
 void MainWindow::on_spinBox_LineWidth_valueChanged(int lineWidth) {
     scene->tm->setLineWidth(lineWidth);
+}
+
+void MainWindow::on_pb_fontDialog_clicked() {
+    bool ok;
+    QFont font = QFontDialog::getFont(&ok, scene->tm->getFont(), this);
+    if(ok)
+        scene->tm->setFont(font);
 }

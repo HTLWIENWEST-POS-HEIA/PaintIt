@@ -323,7 +323,7 @@
      <rect>
       <x>1039</x>
       <y>340</y>
-      <width>111</width>
+      <width>112</width>
       <height>431</height>
      </rect>
     </property>
@@ -384,6 +384,13 @@
         </widget>
        </item>
       </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pb_fontDialog">
+       <property name="text">
+        <string>Font-Dialog</string>
+       </property>
+      </widget>
      </item>
      <item>
       <spacer name="verticalSpacer">

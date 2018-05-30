@@ -2,6 +2,7 @@
 #define TOOLMANAGER_H
 
 // Werkzeuge
+#include "Tools/mytexttool.h"
 #include "Tools/myerasetool.h"
 #include "Tools/mybrushtool.h"
 #include "Tools/mycircletool.h"
@@ -16,7 +17,9 @@ class MyGraphicsScene;
 
 class ToolManager {
 public:
+    QFont getFont();
     int getMyRadius();
+    void setFont(QFont font);
     QColor getColor(int which);
     void setMyRadius(int radius);
     void setLineWidth(int width);

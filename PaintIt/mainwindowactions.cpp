@@ -87,7 +87,7 @@ void MainWindow::on_tbtnFill_clicked() {
     select(sender(),":/icons/icons/fill2.png");
     selectedTool = "fill";
     QPixmap myPixmap = ui->graphicsView->grab();
-    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyFillingTool(myPixmap)));
+    //scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyFillingTool(myPixmap)));
     //QMessageBox::information(this,"Information","FillTool is selected",QMessageBox::Ok);
 }
 
@@ -95,7 +95,7 @@ void MainWindow::on_tbtnText_clicked() {
     deselectPrevious();
     select(sender(),":/icons/icons/text2.png");
     selectedTool = "text";
-    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyTextTool()));
+    //scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyTextTool()));
     //QMessageBox::information(this,"Information","TextTool is selected",QMessageBox::Ok);
 }
 
@@ -111,7 +111,7 @@ void MainWindow::on_tbtnRect_clicked()
     deselectPrevious();
     select(sender(),":/icons/icons/rect2.png");
     selectedTool = "rect";
-    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyRectangleTool()));
+    //scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyRectangleTool()));
 }
 
 void MainWindow::on_tbtnEllipse_clicked()
@@ -119,7 +119,7 @@ void MainWindow::on_tbtnEllipse_clicked()
     deselectPrevious();
     select(sender(),":/icons/icons/ellipse2.png");
     selectedTool = "ellipse";
-    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyCircleTool()));
+    //scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyCircleTool()));
 }
 
 void MainWindow::on_tbtnEraser_clicked()
@@ -127,7 +127,7 @@ void MainWindow::on_tbtnEraser_clicked()
     deselectPrevious();
     select(sender(),":/icons/icons/eraser2.png");
     selectedTool = "eraser";
-    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyEraseTool()));
+    //scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyEraseTool()));
 }
 
 // #######################

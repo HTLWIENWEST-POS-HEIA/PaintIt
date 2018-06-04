@@ -38,6 +38,12 @@ private slots:
     void on_spinBox_Radius_valueChanged(int radius);
     void on_spinBox_LineWidth_valueChanged(int lineWidth);
 
+    void on_tbtnUndo_clicked();
+
+    void on_tbtnFreeze_clicked();
+
+    void on_action_Speichern_unter_triggered();
+
 private:
     Ui::MainWindow *ui;
     void createScene();

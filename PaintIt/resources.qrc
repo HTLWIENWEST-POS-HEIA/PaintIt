@@ -20,5 +20,9 @@
         <file>icons/ellipse.png</file>
         <file>icons/ellipse2.png</file>
         <file>icons/paintit.png</file>
+        <file>icons/undo.png</file>
+        <file>icons/undo2.png</file>
+        <file>icons/freeze.png</file>
+        <file>icons/freeze2.png</file>
     </qresource>
 </RCC>

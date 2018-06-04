@@ -103,6 +103,20 @@ void MainWindow::deselectPrevious() {
         //ui->tbtnSpray->setIconSize(pixmap.rect().size());
         ui->tbtnEraser->setIconSize(toolIconSize);
     }
+    else if (selectedTool == "undo") {
+        QPixmap pixmap(":/icons/icons/undo.png");
+        QIcon ButtonIcon(pixmap);
+        ui->tbtnUndo->setIcon(ButtonIcon);
+        //ui->tbtnSpray->setIconSize(pixmap.rect().size());
+        ui->tbtnUndo->setIconSize(toolIconSize);
+    }
+    else if (selectedTool == "freeze") {
+        QPixmap pixmap(":/icons/icons/freeze.png");
+        QIcon ButtonIcon(pixmap);
+        ui->tbtnFreeze->setIcon(ButtonIcon);
+        //ui->tbtnSpray->setIconSize(pixmap.rect().size());
+        ui->tbtnFreeze->setIconSize(toolIconSize);
+    }
 }
 
 void MainWindow::select(QObject *tbtn, QString resource) {

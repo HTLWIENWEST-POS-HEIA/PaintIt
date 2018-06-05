@@ -367,9 +367,9 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>1039</x>
+      <x>1040</x>
       <y>340</y>
-      <width>112</width>
+      <width>111</width>
       <height>431</height>
      </rect>
     </property>
@@ -381,6 +381,11 @@
        </property>
        <item>
         <widget class="QLabel" name="lbllineWidth">
+         <property name="font">
+          <font>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>Linienstärke</string>
          </property>
@@ -408,13 +413,18 @@
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <item>
         <widget class="QLabel" name="lblRadius">
+         <property name="font">
+          <font>
+           <pointsize>8</pointsize>
+          </font>
+         </property>
          <property name="text">
-          <string>Radius</string>
+          <string>Partikel</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QSpinBox" name="spinBox_Radius">
+        <widget class="QSpinBox" name="spinBox_particleCount">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
            <horstretch>0</horstretch>

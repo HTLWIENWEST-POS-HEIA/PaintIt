@@ -25,10 +25,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->tbtnRect->setIconSize(toolIconSize);
     ui->tbtnEllipse->setIconSize(toolIconSize);
     ui->tbtnEraser->setIconSize(toolIconSize);
-
-    // Initialize Startup-Tool
-    selectedTool = "brush";
-    select((QObject*)ui->tbtnBrush, ":/icons/icons/brush2.png");
 }
 
 void MainWindow::createScene() {

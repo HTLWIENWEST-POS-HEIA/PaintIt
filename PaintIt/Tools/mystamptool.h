@@ -1,12 +1,12 @@
-#ifndef MYFILLINGTOLL_H
-#define MYFILLINGTOLL_H
+#ifndef MYSTAMPTOOL_H
+#define MYSTAMPTOOL_H
 
 #include "toolbase.h"
 
-class MyFillingTool : public ToolBase {
+class MyStampTool : public ToolBase {
 public:
     QGraphicsItem *mousePressed(QGraphicsSceneMouseEvent *event, MyToolProperties *myToolProperties);
     void mouseMoved(QGraphicsSceneMouseEvent *event);
 };
 
-#endif
+#endif // MYSTAMPTOOL_H

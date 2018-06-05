@@ -3,8 +3,12 @@
 
 // Werkzeuge
 #include "Tools/mytexttool.h"
+#include "Tools/mylinetool.h"
+#include "Tools/mystamptool.h"
+#include "Tools/myspraytool.h"
 #include "Tools/myerasetool.h"
 #include "Tools/mybrushtool.h"
+#include "Tools/myfreezetool.h"
 #include "Tools/mycircletool.h"
 #include "Tools/myfillingtool.h"
 #include "Tools/myrectangletool.h"

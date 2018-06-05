@@ -1,3 +1,9 @@
 #include "myrectangletool.h"
-#include <QDebug>
 
+QGraphicsItem *MyRectangleTool::mousePressed(QGraphicsSceneMouseEvent *event, MyToolProperties *myToolProperties) {
+    return nullptr;
+}
+
+void MyRectangleTool::mouseMoved(QGraphicsSceneMouseEvent *event) {
+
+}

@@ -35,13 +35,10 @@ private slots:
     void on_action_Beenden_triggered();
     void on_tbtnForegroundColor_clicked();
     void on_tbtnBackgroundColor_clicked();
-    void on_spinBox_Radius_valueChanged(int radius);
+    void on_spinBox_particleCount_valueChanged(int particleCount);
     void on_spinBox_LineWidth_valueChanged(int lineWidth);
-
     void on_tbtnUndo_clicked();
-
     void on_tbtnFreeze_clicked();
-
     void on_action_Speichern_unter_triggered();
 
 private:

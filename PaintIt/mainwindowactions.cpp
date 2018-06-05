@@ -70,6 +70,7 @@ void MainWindow::on_tbtnLine_clicked() {
     deselectPrevious();
     select(sender(),":/icons/icons/line2.png");
     selectedTool = "line";
+    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyLineTool()));
     //QMessageBox::information(this,"Information","LineTool is selected",QMessageBox::Ok);
 
     //Nessel Markus ####
@@ -81,6 +82,7 @@ void MainWindow::on_tbtnStamp_clicked() {
     deselectPrevious();
     select(sender(),":/icons/icons/stamp2.png");
     selectedTool = "stamp";
+    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyStampTool()));
     //QMessageBox::information(this,"Information","Stamp is selected",QMessageBox::Ok);
 
     //Lager Benjamin ####
@@ -106,7 +108,7 @@ void MainWindow::on_tbtnFill_clicked() {
     select(sender(),":/icons/icons/fill2.png");
     selectedTool = "fill";
     QPixmap myPixmap = ui->graphicsView->grab();
-    //scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyFillingTool(myPixmap)));
+    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyFillingTool()));
     //QMessageBox::information(this,"Information","FillTool is selected",QMessageBox::Ok);
 
     //Koc Attila ####
@@ -118,7 +120,7 @@ void MainWindow::on_tbtnText_clicked() {
     deselectPrevious();
     select(sender(),":/icons/icons/text2.png");
     selectedTool = "text";
-    //scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyTextTool()));
+    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyTextTool()));
     //QMessageBox::information(this,"Information","TextTool is selected",QMessageBox::Ok);
 
     //Resch Dominic ####
@@ -130,6 +132,7 @@ void MainWindow::on_tbtnSpray_clicked() {
     deselectPrevious();
     select(sender(),":/icons/icons/spray2.png");
     selectedTool = "spray";
+    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MySprayTool()));
     //QMessageBox::information(this,"Information","Spray is selected",QMessageBox::Ok);
 
     //Hübner Daniel ####
@@ -142,7 +145,7 @@ void MainWindow::on_tbtnRect_clicked()
     deselectPrevious();
     select(sender(),":/icons/icons/rect2.png");
     selectedTool = "rect";
-    //scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyRectangleTool()));
+    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyRectangleTool()));
 
     //Dobiasch Matthias ####
     //######################
@@ -154,7 +157,7 @@ void MainWindow::on_tbtnEllipse_clicked()
     deselectPrevious();
     select(sender(),":/icons/icons/ellipse2.png");
     selectedTool = "ellipse";
-    //scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyCircleTool()));
+    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyCircleTool()));
 
     //Akalin Ibrahim ####
     //###################
@@ -166,7 +169,7 @@ void MainWindow::on_tbtnEraser_clicked()
     deselectPrevious();
     select(sender(),":/icons/icons/eraser2.png");
     selectedTool = "eraser";
-    //scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyEraseTool()));
+    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyEraseTool()));
 
     //Bonengl Bernhard ####
     //#####################
@@ -189,6 +192,7 @@ void MainWindow::on_tbtnFreeze_clicked()
     deselectPrevious();
     select(sender(),":/icons/icons/freeze2.png");
     selectedTool = "freeze";
+    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyFreezeTool()));
 
     //Hemmati Mohammed ####
     //#####################
@@ -198,8 +202,8 @@ void MainWindow::on_tbtnFreeze_clicked()
 // #######################
 // Sonstige Elemente
 // #######################
-void MainWindow::on_spinBox_Radius_valueChanged(int radius) {
-    scene->tm->setMyRadius(radius);
+void MainWindow::on_spinBox_particleCount_valueChanged(int particleCount) {
+    scene->tm->setMyRadius(particleCount);
 }
 
 void MainWindow::on_spinBox_LineWidth_valueChanged(int lineWidth) {

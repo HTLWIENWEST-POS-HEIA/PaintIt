@@ -23,7 +23,11 @@ SOURCES += main.cpp\
     mygraphicsscene.cpp \
     toolmanager.cpp \
     mainwindowactions.cpp \
-    Tools/mytexttool.cpp
+    Tools/mytexttool.cpp \
+    Tools/mylinetool.cpp \
+    Tools/mystamptool.cpp \
+    Tools/myspraytool.cpp \
+    Tools/myfreezetool.cpp
 
 HEADERS  += mainwindow.h \
     Tools/mybrushtool.h \
@@ -35,7 +39,11 @@ HEADERS  += mainwindow.h \
     toolbase.h \
     toolmanager.h \
     mytoolproperties.h \
-    Tools/mytexttool.h
+    Tools/mytexttool.h \
+    Tools/mylinetool.h \
+    Tools/mystamptool.h \
+    Tools/myspraytool.h \
+    Tools/myfreezetool.h
 
 FORMS    += mainwindow.ui
 

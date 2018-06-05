@@ -2,6 +2,7 @@
 
 ToolManager::ToolManager(MyGraphicsScene *scene) : scene(scene) {
     myToolProperties = new MyToolProperties();
+    activeTool = nullptr;
 }
 
 void ToolManager::setMyRadius(int radius) {
@@ -39,6 +40,8 @@ QColor ToolManager::getColor(int which) {
 }
 
 void ToolManager::mousePressed(QGraphicsSceneMouseEvent *event) {
+    if(activeTool == nullptr) return;
+
     QGraphicsPathItem* newItem = (QGraphicsPathItem*)activeTool->mousePressed(event, myToolProperties);
     if(newItem == nullptr) return;
 
@@ -46,5 +49,7 @@ void ToolManager::mousePressed(QGraphicsSceneMouseEvent *event) {
 }
 
 void ToolManager::mouseMoved(QGraphicsSceneMouseEvent *event) {
+    if(activeTool == nullptr) return;
+
     activeTool->mouseMoved(event);
 }

@@ -22,10 +22,10 @@ class MyGraphicsScene;
 class ToolManager {
 public:
     QFont getFont();
-    int getMyRadius();
+    int getMyParticleCount();
     void setFont(QFont font);
     QColor getColor(int which);
-    void setMyRadius(int radius);
+    void setMyParticleCount(int particleCount);
     void setLineWidth(int width);
     void setActiveTool(ToolBase *tool);
     ToolManager(MyGraphicsScene *scene);

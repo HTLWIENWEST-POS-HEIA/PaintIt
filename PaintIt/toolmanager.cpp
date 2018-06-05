@@ -5,8 +5,8 @@ ToolManager::ToolManager(MyGraphicsScene *scene) : scene(scene) {
     activeTool = nullptr;
 }
 
-void ToolManager::setMyRadius(int radius) {
-    myToolProperties->myRadius = radius;
+void ToolManager::setMyParticleCount(int particleCount) {
+    myToolProperties->myParticleCount = particleCount;
 }
 
 void ToolManager::setLineWidth(int width) {
@@ -27,8 +27,8 @@ QFont ToolManager::getFont() {
     return myToolProperties->myFont;
 }
 
-int ToolManager::getMyRadius() {
-    return myToolProperties->myRadius;
+int ToolManager::getMyParticleCount() {
+    return myToolProperties->myParticleCount;
 }
 
 void ToolManager::setFont(QFont font) {

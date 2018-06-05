@@ -203,7 +203,7 @@ void MainWindow::on_tbtnFreeze_clicked()
 // Sonstige Elemente
 // #######################
 void MainWindow::on_spinBox_particleCount_valueChanged(int particleCount) {
-    scene->tm->setMyRadius(particleCount);
+    scene->tm->setMyParticleCount(particleCount);
 }
 
 void MainWindow::on_spinBox_LineWidth_valueChanged(int lineWidth) {

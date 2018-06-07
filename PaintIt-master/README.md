@@ -1,2 +1,0 @@
-# PaintIt
-Schulprojekt

@@ -19,11 +19,22 @@ void MainWindow::on_action_Beenden_triggered() {
 
 void MainWindow::on_action_Speichern_unter_triggered()
 {
-    //Hautz Sebastian ####
-    //####################
 
-    //QMessageBox::information(this,"Information","Speichern unter",QMessageBox::Ok);
+    bool ok;
+    QString file = QFileDialog::getSaveFileName(this,"Save image", QCoreApplication::applicationDirPath(), "JPEG (*.JPEG);;PNG (*.png)" );
+    if(ok)
+    {
+        QPixmap pixMap = this->ui->graphicsView->grab();
+        pixMap.save(file);
+    }
+    else
+    {
+        //User clicked not ok
+    }
+   // QMessageBox::information(this,"Information",file,QMessageBox::Ok);
 }
+    //QMessageBox::information(this,"Information","Speichern unter",QMessageBox::Ok);
+
 
 // #######################
 // Color-Buttons

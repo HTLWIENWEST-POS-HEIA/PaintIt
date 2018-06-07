@@ -8,6 +8,12 @@
 #include <QFontDialog>
 #include <QColorDialog>
 #include "mygraphicsscene.h"
+#include <QFile>
+#include <QFileDialog>
+#include <QGraphicsView>
+#include <QPixmap>
+#include <QImage>
+#include <QGraphicsScene>
 
 namespace Ui {
     class MainWindow;
@@ -42,6 +48,8 @@ private slots:
 
     void on_spinBox_LineWidth_valueChanged(int arg1);
 
+    void on_action_ffnen_triggered();
+
 private:
     Ui::MainWindow *ui;
     void createScene();
@@ -50,6 +58,8 @@ private:
     MyGraphicsScene *scene = nullptr;
     QSize toolIconSize = QSize(20,20);
     void select(QObject *tbtn, QString resource);
+    QImage  *imageObject;
+    QPixmap image;
 };
 
 #endif // MAINWINDOW_H

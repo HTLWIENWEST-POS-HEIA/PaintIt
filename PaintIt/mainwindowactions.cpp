@@ -206,10 +206,6 @@ void MainWindow::on_spinBox_particleCount_valueChanged(int particleCount) {
     scene->tm->setMyParticleCount(particleCount);
 }
 
-void MainWindow::on_spinBox_LineWidth_valueChanged(int lineWidth) {
-    scene->tm->setLineWidth(lineWidth);
-}
-
 void MainWindow::on_pb_fontDialog_clicked() {
     bool ok;
     QFont font = QFontDialog::getFont(&ok, scene->tm->getFont(), this);

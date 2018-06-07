@@ -21,6 +21,7 @@ public:
     ~MainWindow();
 
 private slots:
+    void on_tbtnUndo_clicked();
     void on_tbtnLine_clicked();
     void on_tbtnFill_clicked();
     void on_tbtnText_clicked();
@@ -29,17 +30,15 @@ private slots:
     void on_tbtnBrush_clicked();
     void on_tbtnSpray_clicked();
     void on_tbtnEraser_clicked();
+    void on_tbtnFreeze_clicked();
     void on_tbtnEllipse_clicked();
     void on_pb_fontDialog_clicked();
     void on_tbtnSwapColors_clicked();
     void on_action_Beenden_triggered();
     void on_tbtnForegroundColor_clicked();
     void on_tbtnBackgroundColor_clicked();
-    void on_spinBox_particleCount_valueChanged(int particleCount);
-    void on_spinBox_LineWidth_valueChanged(int lineWidth);
-    void on_tbtnUndo_clicked();
-    void on_tbtnFreeze_clicked();
     void on_action_Speichern_unter_triggered();
+    void on_spinBox_particleCount_valueChanged(int particleCount);
 
 private:
     Ui::MainWindow *ui;

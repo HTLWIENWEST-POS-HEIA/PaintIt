@@ -26,7 +26,6 @@ public:
     void setFont(QFont font);
     QColor getColor(int which);
     void setMyParticleCount(int particleCount);
-    void setLineWidth(int width);
     void setActiveTool(ToolBase *tool);
     ToolManager(MyGraphicsScene *scene);
     void setColor(QColor color, int which);

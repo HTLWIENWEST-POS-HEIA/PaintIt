@@ -9,11 +9,6 @@ void ToolManager::setMyParticleCount(int particleCount) {
     myToolProperties->myParticleCount = particleCount;
 }
 
-void ToolManager::setLineWidth(int width) {
-    myToolProperties->myPrimaryPen.setWidth(width);
-    myToolProperties->mySecondaryPen.setWidth(width);
-}
-
 void ToolManager::setActiveTool(ToolBase *tool) {
     delete activeTool;
     activeTool = tool;

@@ -12,6 +12,10 @@ void MyGraphicsScene::mousePressEvent(QGraphicsSceneMouseEvent *event) {
     tm->mousePressed(event);
 }
 
+void MyGraphicsScene::mouseReleaseEvent(QGraphicsSceneMouseEvent *event) {
+    tm->mouseReleased(event);
+}
+
 void MyGraphicsScene::mouseMoveEvent(QGraphicsSceneMouseEvent *event) {
     tm->mouseMoved(event);
 }

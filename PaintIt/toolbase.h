@@ -10,6 +10,7 @@ class ToolBase {
 public:
     virtual QGraphicsItem* mousePressed(QGraphicsSceneMouseEvent *event, MyToolProperties *myToolProperties) { (void)event; (void)myToolProperties; return nullptr; };
     virtual void mouseMoved(QGraphicsSceneMouseEvent *event) { (void)event; };
+    virtual void mouseReleased(QGraphicsSceneMouseEvent *event) { (void)event; };
     virtual ~ToolBase(){};
 };
 

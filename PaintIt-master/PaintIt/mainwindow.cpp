@@ -128,3 +128,5 @@ void MainWindow::select(QObject *tbtn, QString resource) {
 MainWindow::~MainWindow() {
     delete ui;
 }
+
+

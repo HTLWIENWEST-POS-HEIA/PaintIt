@@ -31,6 +31,8 @@ public:
     void setColor(QColor color, int which);
     void mouseMoved(QGraphicsSceneMouseEvent *event);
     void mousePressed(QGraphicsSceneMouseEvent *event);
+    void setLineWidth(int Width);
+    int getLineWidth();
 
 private:
     ToolBase *activeTool = nullptr;

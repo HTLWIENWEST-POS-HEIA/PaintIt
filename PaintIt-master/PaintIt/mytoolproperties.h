@@ -13,6 +13,7 @@ struct MyToolProperties{
     QFont myFont;
     QPen myPrimaryPen = QPen(Qt::black, 1, Qt::SolidLine, Qt::RoundCap);
     QPen mySecondaryPen = QPen(Qt::white, 1, Qt::SolidLine, Qt::RoundCap);
+    int myLineWidth = 1;
 };
 
 #endif // MYTOOLPROPERTIES_H

@@ -43,6 +43,16 @@ void ToolManager::mousePressed(QGraphicsSceneMouseEvent *event) {
     scene->addItem(newItem);
 }
 
+void ToolManager::setLineWidth(int Width)
+{
+    myToolProperties->myLineWidth = Width;
+}
+
+int ToolManager::getLineWidth()
+{
+    return myToolProperties->myLineWidth;
+}
+
 void ToolManager::mouseMoved(QGraphicsSceneMouseEvent *event) {
     if(activeTool == nullptr) return;
 

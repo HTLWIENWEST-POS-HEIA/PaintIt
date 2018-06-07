@@ -40,6 +40,8 @@ private slots:
     void on_action_Speichern_unter_triggered();
     void on_spinBox_particleCount_valueChanged(int particleCount);
 
+    void on_spinBox_LineWidth_valueChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
     void createScene();

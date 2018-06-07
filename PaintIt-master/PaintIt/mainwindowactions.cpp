@@ -212,3 +212,8 @@ void MainWindow::on_pb_fontDialog_clicked() {
     if(ok)
         scene->tm->setFont(font);
 }
+
+void MainWindow::on_spinBox_LineWidth_valueChanged(int arg1)
+{
+    scene->tm->setLineWidth(arg1);
+}

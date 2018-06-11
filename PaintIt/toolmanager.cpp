@@ -22,6 +22,10 @@ QFont ToolManager::getFont() {
     return myToolProperties->myFont;
 }
 
+int ToolManager::getStampSize() {
+    return myToolProperties->myStampSize;
+}
+
 int ToolManager::getMyParticleCount() {
     return myToolProperties->myParticleCount;
 }
@@ -32,6 +36,10 @@ void ToolManager::setFont(QFont font) {
 
 QColor ToolManager::getColor(int which) {
     return (which == 0) ? myToolProperties->myPrimaryPen.color() : myToolProperties->mySecondaryPen.color();
+}
+
+void ToolManager::setStampSize(int stampSize) {
+    myToolProperties->myStampSize = stampSize;
 }
 
 void ToolManager::mousePressed(QGraphicsSceneMouseEvent *event) {

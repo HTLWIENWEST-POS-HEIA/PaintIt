@@ -224,7 +224,24 @@ void MainWindow::on_pb_fontDialog_clicked() {
         scene->tm->setFont(font);
 }
 
-void MainWindow::on_spinBox_LineWidth_valueChanged(int arg1)
-{
+void MainWindow::on_spinBox_LineWidth_valueChanged(int arg1) {
     scene->tm->setLineWidth(arg1);
+}
+
+void MainWindow::on_action_ffnen_triggered() {
+    QString imagePath = QFileDialog::getOpenFileName(this,tr("Open File"), "",tr("JPEG (*.jpg *.jpeg);;PNG (*.png)" ));
+
+    imageObject = new QImage();
+    imageObject->load(imagePath);
+    image = QPixmap::fromImage(*imageObject);
+
+
+    //scene = new QGraphicsScene(this);
+    scene->addPixmap(image);
+    scene->setSceneRect(image.rect());
+    ui->graphicsView->setScene(scene);
+}
+
+void MainWindow::on_spinBox_stampSize_valueChanged(int arg1) {
+    scene->tm->setStampSize(arg1);
 }

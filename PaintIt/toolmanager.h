@@ -22,9 +22,11 @@ class MyGraphicsScene;
 class ToolManager {
 public:
     QFont getFont();
+    int getStampSize();
     int getMyParticleCount();
     void setFont(QFont font);
     QColor getColor(int which);
+    void setStampSize(int stampSize);
     void setMyParticleCount(int particleCount);
     void setActiveTool(ToolBase *tool);
     ToolManager(MyGraphicsScene *scene);

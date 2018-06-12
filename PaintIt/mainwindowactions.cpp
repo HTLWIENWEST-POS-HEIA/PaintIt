@@ -189,13 +189,13 @@ void MainWindow::on_tbtnEraser_clicked()
 
 void MainWindow::on_tbtnUndo_clicked()
 {
-    deselectPrevious();
-    select(sender(),":/icons/icons/undo2.png");
-    selectedTool = "undo";
-
     //Kawmi Youssef ####
-    //##################
-
+        //##################
+        //Prüft ob es schon ein Eintrag vorhanden ist, sonst stoppt das Programm
+        if(scene->items().count() != 0) {
+            //Löscht die letzte Eintrag
+            scene->removeItem(scene->items().at(0));
+        }
 }
 
 void MainWindow::on_tbtnFreeze_clicked()

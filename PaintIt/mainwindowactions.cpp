@@ -203,7 +203,9 @@ void MainWindow::on_tbtnFreeze_clicked()
     deselectPrevious();
     select(sender(),":/icons/icons/freeze2.png");
     selectedTool = "freeze";
-    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyFreezeTool()));
+
+    QPixmap myPixmap = ui->graphicsView->grab();
+    scene->tm->setActiveTool(dynamic_cast<ToolBase*>(new MyFreezeTool(myPixmap)));
 
     //Hemmati Mohammed ####
     //#####################

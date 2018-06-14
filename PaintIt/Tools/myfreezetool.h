@@ -4,7 +4,11 @@
 #include "toolbase.h"
 
 class MyFreezeTool : public ToolBase {
+private:
+    QPixmap myPixmap;
+
 public:
+    MyFreezeTool(QPixmap pixmap);
     QGraphicsItem *mousePressed(QGraphicsSceneMouseEvent *event, MyToolProperties *myToolProperties);
     void mouseMoved(QGraphicsSceneMouseEvent *event);
 };

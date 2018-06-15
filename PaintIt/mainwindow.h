@@ -49,6 +49,8 @@ private slots:
     void on_action_ffnen_triggered();
     void on_spinBox_stampSize_valueChanged(int arg1);
 
+    void on_comboBox_currentIndexChanged(const QString &arg1);
+
 private:
     Ui::MainWindow *ui;
     void createScene();

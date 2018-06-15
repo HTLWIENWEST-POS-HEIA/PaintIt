@@ -36,6 +36,7 @@ public:
     void mouseReleased(QGraphicsSceneMouseEvent *event);
     void setLineWidth(int Width);
     int getLineWidth();
+    void setStamp(QString Stampselect);
 
 private:
     ToolBase *activeTool = nullptr;

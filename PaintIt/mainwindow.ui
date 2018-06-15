@@ -484,45 +484,6 @@
       </layout>
      </item>
      <item>
-      <widget class="QComboBox" name="comboBox">
-       <item>
-        <property name="text">
-         <string>Dreieck</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Stern</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Rechteck</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Pfeil-Links</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Pfeil-Rechts</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Pfeil-Oben</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Pfeil-Unten</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item>
       <spacer name="verticalSpacer">
        <property name="orientation">
         <enum>Qt::Vertical</enum>

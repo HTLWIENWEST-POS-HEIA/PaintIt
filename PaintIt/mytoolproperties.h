@@ -7,7 +7,7 @@
 
 #include <QPen>
 #include <QFont>
-#include <QString>
+#include <string>
 
 struct MyToolProperties{
     int myParticleCount = 20;
@@ -16,7 +16,13 @@ struct MyToolProperties{
     QPen mySecondaryPen = QPen(Qt::white, 1, Qt::SolidLine, Qt::RoundCap);
     int myLineWidth = 1;
     int myStampSize = 200;
-    QString myStamp = "triangle";
+    std::string myStamp = "triangle";
+  //std::string myStamp = "star";
+  //std::string myStamp = "rectangle";
+  //std::string myStamp = "arrowRight";
+  //std::string myStamp = "arrowLeft";
+  //std::string myStamp = "arrowUp";
+  //std::string myStamp = "arrowDown";
 
 };
 

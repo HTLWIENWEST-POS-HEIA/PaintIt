@@ -247,20 +247,3 @@ void MainWindow::on_action_ffnen_triggered() {
 void MainWindow::on_spinBox_stampSize_valueChanged(int arg1) {
     scene->tm->setStampSize(arg1);
 }
-
-void MainWindow::on_comboBox_currentIndexChanged(const QString &arg1) {
-    if(arg1 == "Dreieck")
-        scene->tm->setStamp("triangle");
-    else if(arg1 == "Rechteck")
-        scene->tm->setStamp("rectangle");
-    else if(arg1 == "Stern")
-        scene->tm->setStamp("star");
-    else if(arg1 == "Pfeil-Links")
-        scene->tm->setStamp("arrowLeft");
-    else if(arg1 == "Pfeil-Rechts")
-        scene->tm->setStamp("arrowRight");
-    else if(arg1 == "Pfeil-Oben")
-        scene->tm->setStamp("arrowUp");
-    else
-        scene->tm->setStamp("arrowDown");
-}

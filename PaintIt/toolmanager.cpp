@@ -67,6 +67,11 @@ int ToolManager::getLineWidth()
     return myToolProperties->myLineWidth;
 }
 
+void ToolManager::setStamp(QString Stampselect)
+{
+    myToolProperties->myStamp = Stampselect;
+}
+
 void ToolManager::mouseMoved(QGraphicsSceneMouseEvent *event) {
     if(activeTool == nullptr) return;
 
